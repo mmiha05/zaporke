@@ -4,12 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zaporke</title>
+    <title>Zaporke - osnovna sigurnosna higijena</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="vue.js"></script>
+    <link rel="icon" href="favicon.ico" />
+    <meta
+      name="description"
+      content="Zaporke i njihovi problemi, stvaranje sigurnih zaporki, dobre i loše prakse, ostale mogućnosti zaštite dragocijenih računa"
+    />
   </head>
   <body>
-    Hello World
+    <header class="container">
+      <h1>Zaporke - osnovna sigurnosna higijena</h1>
+      <p class="featured">
+        U današnjem svijetu zaporke i dalje predstavljaju oslonac zaštite naših
+        dragocjenih računa, pa samim time naših podataka ali također zaštičuju
+        nas od lažnog predstavljanja - u najmanju ruku netko s ukradenom
+        zaporkom može u naše ime se predstavljati na društvenoj mreži, u gorem
+        slučaju može imati pristup nekom financijskom računu.
+        <br />
+        <br />
+        No, zaporke su teške za koristiti ispravno, ako su "slabe" onda je naša
+        sigurnost ugrožena, ako su "jake" onda su nezgodne za koristiti - teško
+        ih pamtimo, lijeni smo ih upisivati što dovodi do frustracije i radnja
+        poput zapisivanja zaporki na svima vidljivo mjesto i slično što na kraju
+        zapravo pogorša stvar.
+        <br />
+        <br />
+        Svrha ove stranice je moja želja da Vam podjelim mojih par zrna pameti i
+        mišljenja o toj problematici, riješenjima, alternativama te i mali alat
+        integriran u ovu web stranicu koji Vam može biti polazna točka u
+        izgradnji sigurnije zaporke.
+      </p>
+    </header>
+
+    <!-- 
+      Color mode toggles
+    -->
+    <aside>
+      <a
+        class="focusable-anchor clickable"
+        tabindex="0"
+        id="color-mode-toggler"
+      >
+        <svg
+          role="button"
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-bulb"
+          width="44"
+          height="44"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="yellow"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <g id="dark-mode">
+            <path stroke="none" d="M0 0h24v24H0z" />
+            <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+            <path
+              d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
+            />
+            <line x1="9.7" y1="17" x2="14.3" y2="17" />
+          </g>
+
+          <g id="light-mode">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
+            />
+            <line x1="9.7" y1="17" x2="14.3" y2="17" />
+          </g>
+        </svg>
+      </a>
+    </aside>
+
+    <!-- SCRIPT -->
     <script src="js.js"></script>
   </body>
 </html>
