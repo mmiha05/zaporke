@@ -75,7 +75,7 @@
       </p>
     </header>
 
-    <main>
+    <main class="container">
       <section>
         <h2 id="problematika">Problematika</h2>
         <p>
@@ -125,7 +125,7 @@
           Zvuči suludo malo? Pa kad se prvi put čuje, da, ali računala danas
           mogu u manje od sekunde isprobati na stotine tisuća kombinacija...i
           više, ali razlog zašto ne pišem točan broj je što se on preko noći
-          promijeni.
+          promijeni. Budem ovo još objasnio u nastavku...
         </p>
         <p>
           Na stranici
@@ -137,6 +137,261 @@
 
       <section>
         <h2 id="dobra-vs-losa-zaporka">Dobra vs. Loša zaporka</h2>
+        <p>
+          Uglavnom, spomenuh da doslovno hakeri jednom kad ukradu šifrirane
+          zaporke, doslovno pogađaju zaporke dok ne pogode. Zvuči neefikasno
+          kada se o tome priča kroz aspekt ljudskog mozga, no računala to izvode
+          iznimno brzo. Postoje dva osnovna načina na koji hakeri to izvode:
+        </p>
+        <ul>
+          <li>
+            Doslovno isprobavanje svake kombinacije. Npr. primjera radi zaporka
+            ima samo dva slova: haker će (ne on ručno nego pomoću računala)
+            isprobavati kombinacije: <em>aa, ab, ba, bb</em> itd...
+          </li>
+          <li>
+            Korištenje unaprijed pripremljenih riječnika (<em
+              >eng. dictionary attack</em
+            >) gdje se umjesto prolaženja kroz sve moguće kombinacije znakova
+            koriste unaprijed definirane liste riječi koje su najčešće zaporke,
+            npr; <em>123456, zaporka, lozinka, password</em> itd...
+          </li>
+        </ul>
+        <p>
+          Postoji i još jedan način kako hakeri pokušavaju "razbiti" zaporke, a
+          to je u slučaju baš ciljanog napada. Radi se također o pogađanju ali u
+          ovom slučaju prilagođen informacijama o Vama, npr. haker će koristiti
+          datume Vama važnih događija i imena Vama dragih osoba. No ovo je već
+          slučaj kada netko radi ciljani napad na Vas, a u tom slučaju neke
+          druge metode će prije biti upotrebljenje poput
+          <em>keyloggera, social engineeringa</em> i sličnog. Nije bitno što su
+          te metode ako ne znate, nisu trenutna tema.
+        </p>
+
+        <article>
+          <h3 id="dobra-zaporka">Dobra zaporka</h3>
+          <p>
+            Dakle, polazeći od prethodno rečenog, možemo sve svesti na slijedeće
+            zaključke
+          </p>
+          <ul>
+            <li>Računala JAKO BRZO mogu pogađati zaporke.</li>
+            <li>
+              Hakeri to još dodatno ubrzaju koristeći listu najčešćih zaporki.
+            </li>
+            <li>
+              Ako ste im baš Vi sjeli na žulj, rabit će i Vaše osobne podatke
+              (razmislite koliko osoba može saznati o Vama na društvenim
+              mrežama).
+            </li>
+          </ul>
+          <p>Iz toga preporučujem slijedeće:</p>
+          <ul>
+            <li>Zaporka mora biti dugačka: 16 znakova minimum.</li>
+            <li>
+              Zaporka mora biti nasumična, ne smije biti predvidljivim
+              ponavljanjima, ako je zaporka 16 puta ponovljeno slovo "a" onda to
+              nije jaka zaporka
+            </li>
+            <li>Zaporka ne koristi popularne riječi, izraze, fraze</li>
+            <li>Zaporka ne koristi ništa od vaših osobnih podataka</li>
+            <li>Zaporka se korišti na samo jednom mjestu!!!</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 id="losa-zaporka">Loša zaporka</h3>
+          <p>Skoro pa suprotno prethdnome, loša zaporka je:</p>
+          <ul>
+            <li>Kratka.</li>
+            <li>Nije uopće nasumična.</li>
+            <li>Koristi česte riječi i fraze.</li>
+            <li>Koristi vaše osobne podatke.</li>
+            <li>
+              <strong
+                >Koristi prividno dobre prakse poput zamijene slova s nekim
+                znakom, npr umjesto <em>zaporka</em> da napišemo
+                <em>z4p0rk4</em>. Hakeri su nanjušili takve spačke odavno i
+                takve zaporke mogu jedino sudjelovati u natjecanju najlošijih
+                zaporki.</strong
+              >
+            </li>
+            <li>Koristi na više mjesta.</li>
+          </ul>
+        </article>
+
+        <p>
+          Pa sad kad se to nekako sve uzme u obzir, ispada da je dobra zaporka
+          nešto poput ove tu:
+          <em>X&T4MKchKw3kUTqJ</em>
+          <br />
+          <br />
+          No što je problem? Vjerojatno prvo što Vam je palo na pamet - tko će
+          to zapamtit? E pa ideja je da ne morate to pamtit.
+          <br />
+          <br />
+          Što...? Kako...?
+        </p>
+      </section>
+
+      <section>
+        <h2 id="dobra-higijena-zaporki">
+          Dobra higijena zaporki - kako pamtiti neupamtljivo
+        </h2>
+        <p>
+          Dobra zaporka je nešto poput <em>X&T4MKchKw3kUTqJ</em> i koristimo je
+          samo na jednom mjestu. No samo jednu ovakvu zaporku je izazov
+          upamtiti, a kamoli još 5, 10, 50, 100+ njih. <br /><br />
+          Što onda da radimo? Koristite upravitelj zaporki (<em
+            >eng. password manager</em
+          >).
+        </p>
+
+        <article>
+          <h3 id="upravitelji-zaporki">Upravitelji zaporki</h3>
+          <p>
+            Upravitelji zaporki su alati čija je namijena kao što im naziv kaže:
+            da upravjaju (odnosno Vi pomoću njih) zaporkama koristeći samo jednu
+            - glavnu zaporku. Omogućuju nam da stvaramo jako zaporke poput
+            <em>X&T4MKchKw3kUTqJ</em> ali također pamte sve zaporke - što nam
+            omogućuje da na jednostavan način, bez da ih sami pamtimo, imamo za
+            svaku stranicu jedinstvenu zaporku. Naravno, u upravitelje zaporki
+            moguće je unjeti stare zaporke ako niste odmah spremni sve
+            mijenjati. Još jedna prednost upravitelja zaporki je što omogućuje
+            da se uz zaporke pohrane i stranice (te aplikacije) vezane uz
+            zaporku što omogućuje da se podaci o prijavi automatski ispune
+            pomoću upravitelja zaporke no također štiti od tzv.
+            <em>phishing</em> napada jer upravitelj zaporke neće ponuditi
+            automatsko popunjavanje polja prijave ukoliko nije na jednoj od
+            stranica koje smo naveli kao povezane s zaporkom.
+
+            <br />
+            <br />
+            <strong
+              >Okej, ali ne stavljam li onda sve svoje zaporke na jedno mjesto,
+              ili što bi se reklo - stavljam li sva jaja u istu košaru?
+            </strong>
+            <br />
+            <br />
+            Ovo je donekle istina, ali - nemoguće je upamtiti dugačke i
+            komplicirane zaporke za mnogo stranica. Pa će to neminovno dovesti
+            do toga da ponovno istu zaporku koristite na više mjesta ili da je
+            zaporka preslaba. Obje situacije su iznimno loše kao što sam gore
+            iznad objasnio, pa na osnovu toga argumentiram: jedan softver
+            specijaliziran za rad s zaporkama je bolja opcija nego voditi računa
+            o zaporkama "u glavi" ili što bi se reklo - bolje je nositi sva jaja
+            u korpi od čelika nego ih razbacat po dvorištu.
+            <br />
+            <br />
+            <strong
+              >Okej, ali nemam toliko zaporki, mogo bi smisliti par
+              kompliciranih i zapisati ih negdje u nekoj tekstualnoj datoteci
+              ili fizički na papiru.
+            </strong>
+            <br />
+            <br />
+            Upravitelji zaporki sve zaporke šifriraju na Vašem uređaju, to znači
+            da ako netko dobije pristup Vašem računalu bez Vaše glavne zaporke
+            nemoguće je pristupiti ostalim zaporkama. S druge strane, ako
+            zapišete nešto u tekstualnoj datoteci, bilo koji virus ili osoba s
+            pristupom Vašem računalu može ih pročitati. Ako ih zapisujete na
+            fizički papir, opet imate rizik da taj papir izgubite ili Vam ga
+            netko ukrade.
+            <br />
+            Kao bonus: upravitelji zaporki (većina njih barem) omogućuju da
+            sinkronizirate zaporke između drugih računala, mobitela itd. i tamo
+            ih također koristite.
+            <br />
+            <br />
+            <strong
+              >Ja ne vjerujem onome tko je napravio upravitelj zaporki ili da mi
+              zaporke budu negdje na internetu.</strong
+            >
+            <br />
+            <br />
+            Razumljivo, no valja uzeti tri stvari u obzir. Prva je da je mnogo
+            upravitelja zaporki otvorenog koda - što znači da svatko može
+            pročitati i vidjeti što oni rade. Druga stvar je da Vaše zaporke
+            nikad ne budu na internetu u "čistom" obliku. Sve Vaše zaporke su
+            pohranjene u šifriranom obliku, a Vaša glavna zaporka je ključ koji
+            ih dešifrira, a to šifriranje/dešifriranje se događa na Vašem
+            uređaju, te se na internet šalju samo kad su šifrirane. Ako i dalje
+            se ne osjećate sigurno oko toga, postoje i upravitelji zaporki koji
+            rade samo lokalno/<em>offline</em>. Treća stvar je da bilo kakve
+            "sive" radnje onih koji rade na upraviteju zaporki idu direktno
+            protiv njihovog poslovnog modela i svrhe postojanja - zamislite da
+            postoji banka koja povremeno skine ljudima 5000 KN s računa bez
+            obrazloženja, koliko bi ljudi ostalo kod takve banke?.
+          </p>
+          <br />
+          <br />
+          <strong
+            >Ima toliko mnogo upravitelja zaporki, koji da odaberem?</strong
+          >
+          <br />
+          <br />
+          Ja neću govoriti koji je najbolji po nekim tehničkim ili drugim
+          kriterijima, svi popularni su tu negdje. Ali moj subjektivni odabir i
+          savjet je <a href="https://bitwarden.com/">Bitwarden</a>. Dolazi u
+          besplatnoj i plaćenoj verziji. Besplatna verzija je i više nego
+          dovoljna. Pruža mogućnost online sinkronizacije, dostupan je na svim
+          uređajima i platformama (Windows, Mac, Linux, Android, iOS) te je
+          otvorenog koda.
+          <br />
+          Bitwarden je upravitelj zaporki koji zaporke pohranjuje na internetu
+          (u oblaku), ako želite nešto što radi isključivo lokalno/<em
+            >offline</em
+          >
+          savjetujem onda <a href="https://keepassxc.org/">KeePassXC</a> iako
+          sam ga osobno slabo koristio, no vidio ga dosta kod drugih u upotrebi.
+          <br />
+          <br />
+          <strong
+            >Zaključak je da je šifru poput <em>X&T4MKchKw3kUTqJ</em> teško
+            upamtiti. Kako onda da stvorim dobru zaporku za upravitelj zaporki
+            koju neću zaboraviti?</strong
+          >
+          <br />
+          <br />
+          Dobro pitanje - preporučam korištenje tzv. <em>passphrase</em>, što
+          iskreno ne znam kako prevesti drugačije nego: izraz kao zaporka.
+        </article>
+      </section>
+
+      <section>
+        <h2 id="izraz-kao-zaporka">Izraz kao zaporka</h2>
+        <p>
+          Problem što nekad moramo jednostavno znati i nositi zaporku u glavi.
+          Npr. moramo znati glavnu zaporku upravitelja zaporki da bi mogli
+          pristupiti ostalim zaporkama. Već smo zaključili da je
+          <em>X&T4MKchKw3kUTqJ</em> teško zapamtit. Neki savjetuju da se stvori
+          jaka zaporka iz neke priče ili obrnuto. Npr. <br />
+          Zaporka je <em>$k100aiJ2000G</em>, a priča je
+          <em>Dolarima sam kupio 100 automobila iz Japana 2000. godine</em>.
+          Meni je osobno to glupost, ali evo, svakome po volji. <br />
+          <br />
+          <br />
+          Pravo riješenje je po meni korištenje izraza kao zaporke - dosta je
+          slično ovoj prethodnoj metodi, ali umjesto da morate pamtiti i priču i
+          zaporku vezanu uz nju, pamtite samo zaporku koja se sastoji od
+          nekolicine nasumičnih riječi koje je jednostavno zapamtiti same po
+          sebi. <br />
+          Npr. ovo je jedan izraz: <em>auto-avion-lopta-teren-maska</em>
+          <br />
+          <br />
+          Samo, problem je što ovaj izraz kojeg sam ja sad smislio i nije toliko
+          nasumičan. Riječi su ili srodne ili prečeste u uporabi. Važan faktor u
+          stvaranju nasumičnih zaporki je sama nasumičnost - ljudi često misle
+          da su nasumični dok nisu, a postići nasumičnost na računalima nije
+          toliko jednostavno kao što bi netko pomislio.
+          <br />
+          Na internetu postoji mnogo stvaratelja nasumičnih izraza, ali slabo
+          sam pronašao one one na hrvatskom jeziku što me je motiviralo da
+          zapravo i napišem ovo sve. U nastavk umožete koristiti alat koji će
+          izgenerirati nasumični izraz na hrvatskom jeziku.
+          <br />
+          <br />
+        </p>
       </section>
     </main>
 

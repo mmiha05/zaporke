@@ -29,8 +29,6 @@ const asideMenu = new Vue({
       }
     } catch {}
 
-    console.log(isDarkMode);
-
     this.isDarkMode =
       isDarkMode !== null
         ? isDarkMode
