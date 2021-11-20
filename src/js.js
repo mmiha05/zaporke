@@ -36,6 +36,22 @@ const asideMenu = new Vue({
   },
 });
 
+const phraseGenerator = new Vue({
+  el: "#generator",
+  data: {
+    count: 4,
+    insertDollar: false,
+    result: "",
+  },
+  methods: {
+    generate() {
+      const generateRandomNum = () => {};
+
+      this.result = "123123";
+    },
+  },
+});
+
 function addLinksToSectionsAndArticles() {
   const appender = (tag, titleTag) => {
     const containers = document.querySelectorAll(tag);

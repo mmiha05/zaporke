@@ -7,6 +7,7 @@
     <title>Zaporke - osnovna sigurnosna higijena</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="vue.js"></script>
+    <script src="words.js"></script>
     <link rel="icon" href="favicon.ico" />
     <meta
       name="description"
@@ -392,6 +393,97 @@
           <br />
           <br />
         </p>
+      </section>
+
+      <!-- Generator -->
+      <section id="generator">
+        <h2 id="generator-izraza-kao-zaporke">Generator izraza kao zaporke</h2>
+        <p>
+          Ovo je generator izraza kao zaporke na hrvatskom jeziku. Moj savjet je
+          da ne odabirete manje od 4 riječi za izraz.
+          <br />
+          Sastoji se od 35497 hrvatskih riječi (ne nužno književnih). Što znači
+          da ako odaberete 4 riječi, broj kombinacija koje se mogu stvoriti je
+          35497 na četvrtu potenciju, Vama ostavljam kalkulator da izračunate
+          koliko je to.
+          <br />
+          Također postoji opcija da se umetne <em>$</em> nasumično u jednu od
+          rečenica, što dodatno povećava nasumičnost.
+        </p>
+        <p>
+          <span class="warning">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#2c3e50"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 9v2m0 4v.01" />
+              <path
+                d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75"
+              /></svg
+            >Volio bih napomenuti i molim Vas da pročitate:
+          </span>
+        </p>
+        <ul>
+          <li>
+            Web pregednici nisu najbolji u nasumičnom odabiru, potrudio sam se
+            to napraviti najbolje što znam.
+          </li>
+          <li>
+            Ovo je više u edukativne svrhe i da dobijete polaznu točku. Nikad
+            nevjerujte nekome na internetu. Sva kalkulacija odvija se lokalno i
+            ne napušta preglednik, ali nikad ne znat jel mene netko može
+            hakirat!
+          </li>
+          <li>
+            Uvijek možete sami pogledati listu riječi na ovom
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://raw.githubusercontent.com/mmiha05/zaporke.github.io/main/src/words.js?token=ALG5QFP3P7POO74OM7VHJ7TBTESEM"
+              >linku</a
+            >
+            i sami nekom drugom metodom nasumičnog odabira odabrati riječi.
+          </li>
+          <li>
+            Ako postoji koja uvredljiva riječ, isprike unaprijed. Slobodno
+            pošaljite problematičnu riječ na
+            <a href="mailto:contact@zaporkegithub.anonaddy.com"
+              >contact@zaporkegithub.anonaddy.com</a
+            >
+            i izbrisat ću je.
+          </li>
+          <li>
+            Pročitajte i zadnju sekciju na stranici
+            <a href="#dodatni-savjeti">(Dodatni savjeti)</a>.
+          </li>
+          <br />
+          <!-- VUE BINDS -->
+          <form v-on:submit.prevent @submit="generate">
+            <div class="form-group">
+              <label for="count">Broj riječi (max 10 zbog performansi):</label>
+              <input type="number" min="1" max="10" v-model="count" />
+            </div>
+            <div class="form-group">
+              <label for="count"
+                >Ubaci <em>$</em> nasumično u jednu od riječi:</label
+              >
+              <input type="checkbox" v-model="insertDollar" class="clickable" />
+            </div>
+            <div v-if="!result">Ovdje če biti vaš rezultat</div>
+            <div v-else>
+              <code>{{result}}</code>
+            </div>
+            <button>{{result ? 'Ponovno' : 'Izgeneriraj'}}</button>
+          </form>
+        </ul>
       </section>
     </main>
 
