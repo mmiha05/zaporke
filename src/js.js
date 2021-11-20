@@ -4,7 +4,8 @@ const asideMenu = new Vue({
     isDarkMode: null,
   },
   methods: {
-    toggleColorMode() {
+    toggleColorMode(event) {
+      event.type === "click" && document.activeElement?.blur?.();
       this.isDarkMode = !this.isDarkMode;
     },
   },
