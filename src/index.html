@@ -71,6 +71,9 @@
             preferencije (poput tamnog ili svjetlog načina), i to se pohranjuje
             samo lokalno, na Vašem pregledniku i ne koristi se nigdje drugdje
             niti u bilo koje druge svrhe.
+            <br />
+            Sav sadržaj ove stranice možete slobodno citirati i objavljivati uz
+            uvjet da navedete izvor.
           </em>
         </small>
       </p>
@@ -469,13 +472,24 @@
           <form v-on:submit.prevent @submit="generate">
             <div class="form-group">
               <label for="count">Broj riječi (max 10 zbog performansi):</label>
-              <input type="number" min="1" max="10" v-model="count" />
+              <input
+                id="count"
+                type="number"
+                min="1"
+                max="10"
+                v-model="count"
+              />
             </div>
             <div class="form-group">
-              <label for="count"
+              <label class="clickable" for="dollar"
                 >Ubaci <em>$</em> nasumično u jednu od riječi:</label
               >
-              <input type="checkbox" v-model="insertDollar" class="clickable" />
+              <input
+                id="dollar"
+                type="checkbox"
+                v-model="insertDollar"
+                class="clickable"
+              />
             </div>
             <div
               v-if="!result"
