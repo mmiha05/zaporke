@@ -1,7 +1,3 @@
-template {
-  display: none;
-}
-
 :root {
   --text-color: rgb(29, 5, 5);
   --background-color: rgb(253, 247, 247);
