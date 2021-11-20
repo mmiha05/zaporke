@@ -45,9 +45,30 @@ const phraseGenerator = new Vue({
   },
   methods: {
     generate() {
-      const generateRandomNum = () => {};
+      const generateRandomNumber = () => {
+        const array = new Uint32Array(1);
+        window.crypto.getRandomValues(array);
+        return array[0];
+      };
 
-      this.result = "123123";
+      const result = [];
+
+      for (let i = 0; i < this.count; i++) {
+        result.push(WORDS_LIST[generateRandomNumber() % WORDS_LIST.length]);
+      }
+
+      if (this.insertDollar) {
+        const randomWordIndex = generateRandomNumber() % result.length;
+        const word = result[randomWordIndex];
+
+        const randomCharIndex = generateRandomNumber() % word.length;
+        const chars = word.split("");
+        chars.splice(randomCharIndex, 0, "$");
+
+        result[randomWordIndex] = chars.join("");
+      }
+
+      this.result = result.join("-");
     },
   },
 });

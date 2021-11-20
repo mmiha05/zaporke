@@ -477,8 +477,13 @@
               >
               <input type="checkbox" v-model="insertDollar" class="clickable" />
             </div>
-            <div v-if="!result">Ovdje če biti vaš rezultat</div>
-            <div v-else>
+            <div
+              v-if="!result"
+              style="min-height: 50px; padding-top: 1rem; text-align: center"
+            >
+              Ovdje če biti vaš rezultat
+            </div>
+            <div v-else style="min-height: 50px">
               <code>{{result}}</code>
             </div>
             <button>{{result ? 'Ponovno' : 'Izgeneriraj'}}</button>
