@@ -14,6 +14,26 @@
     />
   </head>
   <body>
+    <template id="section-link-template">
+      <a style="display: inline-block" class="clickable focusable">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#2c3e50"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+          <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+        </svg>
+      </a>
+    </template>
+
     <header class="container">
       <h1>Zaporke - osnovna sigurnosna higijena</h1>
       <p class="featured">
@@ -35,10 +55,90 @@
         mišljenja o toj problematici, riješenjima, alternativama te i mali alat
         integriran u ovu web stranicu koji Vam može biti polazna točka u
         izgradnji sigurnije zaporke.
+        <br />
+        <br />
+        <small>
+          <em>
+            <strong>Napomena:</strong> sav sadržaj na ovoj stranici je u
+            edukativne svrhe i čisto rezultat moga osobnog mišljenja te ništa
+            više. Za konkretne potrebe za Vaš individualni slučaj posavjetujte
+            se sa stručnjacima. Svaki proizvod/softver/tvrtka koju navedem kao
+            preporuku nisu niti na koji način povezani samnom, niti sam
+            financijski (ili drugačije) potaknut da ih spominjem.
+            <br />
+            Stranica ne prikuplja osobne podatke, jedino što se pohranjuje su
+            preferencije (poput tamnog ili svjetlog načina), i to se pohranjuje
+            samo lokalno, na Vašem pregledniku i ne koristi se nigdje drugdje
+            niti u bilo koje druge svrhe.
+          </em>
+        </small>
       </p>
     </header>
 
-    <main></main>
+    <main>
+      <section>
+        <h2 id="problematika">Problematika</h2>
+        <p>
+          Svatko od nas danas u prosjeku posjeduje poveći broj računa; računi
+          društvenih mreža, e-mailovi, razni web-shopovi, studentski/učenički
+          računi, poslovni računi...
+          <br />
+          <br />
+          E sad, dolazimo do prve problematike, zapitajte sebe: koliko Vaših
+          računa djele istu zaporku? Ako je odgovor različiti od "niti jedan",
+          vjerujete li da stranica A savršeno štiti vaše podatke (a samim time i
+          zaporku) te da nikako ne može utjecati na stranicu B, gdje imate istu
+          zaporku? Kvalitetno dizajnirani sustavi štite vašu zaporku tako da je
+          šifriraju na način da nitko ne može pročitati koja je točno Vaša
+          zaporka. Ukratko, to funkcionira na način da Vašu zaporku pretvori u
+          kriptirani (naizgled) nasumični niz znakova, te se ona sprema kao
+          takva, a obrnuti proces je gotovo nemoguć (naravno, uz pretpostavku
+          korištenja pravilnih i modernih praksi, ali to nije tema ovdje).
+          Prilikom svake vaše prijave zaporka koju ste unjeli se pretvara u taj
+          kriptirani niz znakova i s njime se uspoređuje, a Vaša prava zaporka
+          nigdje ne ostaje.
+          <br />
+          <br />
+          Došli smo do druge problematike, malo gore iznad sam rekao da
+          <b>kvalitetno dizajnirani</b> sustavi šifriraju Vaše zaporke. No što
+          je s onim koji nisu takvi? Pa ukratko, ukoliko dožive uspješni
+          hakerski napad, Vaša zaporka je otuđena istog trenutka. Ako koristite
+          tu zaporku na drugim mjestima, vrlo vjerojatno koristite i isti e-mail
+          s kojim ste se registrirali, koliko dugo mislite da hakerima treba da
+          isprobaju taj e-mail i tu zaporku na drugim servisima?
+          <br />
+          I da, ako mislite da ovakvi <em>nekvalitetno dizajnirani</em> sustavi
+          su samo oni "lošijih" kompanija, mnoge ozbiljne kompanije su bile
+          "uhvaćene" kako zaporke pohranjuju u čistom, nešifriranom obliku. Koje
+          su točno...neću spominjati ali u par minuta surfanja se sazna.
+          <br /><br />
+          E pa sad, okej, dogodio se hakerski napad na stranicu X koju
+          koristimo, no sustav im je dobro organiziran i zaporke su šifrirane,
+          što onda? E pa tu u igru ulazi koliko je "snažna" vaša zaporka. Zašto?
+          Ranije sam spomenuo da taj proces šifriranja pretvara zaporku u
+          (naizgled) nasumičan niz znakova, ali ništa ne sprečava hakera da
+          pokušava to isto (dakle, unosi neki tekst koji će sam šifrirati) dok
+          jednom ne pogodi identičan niz znakova kao Vaša šifrirana zaporka. Ako
+          je za unos X, nakon šifriranja dobio rezultat Y, a Y je jednak Vašoj
+          šifriranoj zaporci, onda haker zna da je Vaša zaporka X.
+          <br />
+          Zvuči suludo malo? Pa kad se prvi put čuje, da, ali računala danas
+          mogu u manje od sekunde isprobati na stotine tisuća kombinacija...i
+          više, ali razlog zašto ne pišem točan broj je što se on preko noći
+          promijeni.
+        </p>
+        <p>
+          Na stranici
+          <a href="https://haveibeenpwned.com/">Have I've been pwned?</a> možete
+          upisati vaš e-mail i saznati da li postoji u bazi (poznatih!)
+          hakerskih napada.
+        </p>
+      </section>
+
+      <section>
+        <h2 id="dobra-vs-losa-zaporka">Dobra vs. Loša zaporka</h2>
+      </section>
+    </main>
 
     <!-- 
       Color mode toggles
@@ -48,7 +148,7 @@
         class="focusable-anchor clickable"
         tabindex="0"
         @click="toggleColorMode"
-        v-on:keypress.enter="toggleColorMode"
+        @keypress.enter="toggleColorMode"
       >
         <svg
           role="button"
