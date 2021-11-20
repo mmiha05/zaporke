@@ -38,6 +38,8 @@
       </p>
     </header>
 
+    <main></main>
+
     <!-- 
       Color mode toggles
     -->
@@ -45,7 +47,7 @@
       <a
         class="focusable-anchor clickable"
         tabindex="0"
-        id="color-mode-toggler"
+        @click="toggleColorMode"
       >
         <svg
           role="button"
@@ -60,7 +62,7 @@
           stroke-linecap="round"
           stroke-linejoin="round"
         >
-          <g id="dark-mode">
+          <g id="dark-mode" v-if="!isDarkMode">
             <path stroke="none" d="M0 0h24v24H0z" />
             <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
             <path
@@ -69,7 +71,7 @@
             <line x1="9.7" y1="17" x2="14.3" y2="17" />
           </g>
 
-          <g id="light-mode">
+          <g id="light-mode" v-else>
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path
               d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
