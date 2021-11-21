@@ -7,7 +7,7 @@
   "license": "MIT",
   "browserslist": "> 0.25%, not dead",
   "scripts": {
-    "build": "babel src/js.js -d public && node scripts/build.js",
+    "build": "babel src/js.js -d docs && node scripts/build.js",
     "dev": "npx serve src -p 3000",
     "start": "yarn dev",
     "prepare": "husky install",
