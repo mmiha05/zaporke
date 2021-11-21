@@ -1,0 +1,152 @@
+:root {
+  --text-color: rgb(29, 5, 5);
+  --background-color: rgb(253, 247, 247);
+  --outline-color: rgb(126, 126, 236);
+  --border-color: #e2e1e1;
+}
+
+.dark {
+  --text-color: rgb(253, 247, 247);
+  --background-color: rgb(29, 5, 5);
+  --outline-color: rgb(31, 31, 173);
+  --border-color: rgb(68, 18, 18);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 0.5rem 1rem 4rem 1rem;
+  word-break: break-word;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+.container {
+  width: 1080px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.focusable-anchor {
+  display: inline-block;
+}
+
+.focusable-anchor:focus {
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: var(--outline-color);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+svg {
+  display: block;
+}
+
+#light-mode {
+  filter: brightness(0.7);
+}
+
+#dark-mode {
+  filter: brightness(0.9);
+}
+
+aside {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: 1px solid var(--border-color);
+  border-right: none;
+  border-bottom: none;
+  background-color: var(--background-color);
+}
+
+header,
+section {
+  margin-bottom: 3rem;
+}
+
+article {
+  margin-top: 2rem;
+}
+
+ul,
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.featured {
+  font-size: 18px;
+}
+
+li {
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.warning {
+  color: rgb(219, 146, 10);
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input[type="number"] {
+  width: 64px;
+  text-align: center;
+}
+
+.form-group label {
+  padding-right: 1rem;
+}
+
+form button {
+  margin-top: 1rem;
+  min-width: 124px;
+  height: 24px;
+}
+
+code {
+  border: 4px solid var(--border-color);
+  padding: 0.5rem;
+  margin: 1rem 0;
+  display: block;
+  text-align: center;
+}
