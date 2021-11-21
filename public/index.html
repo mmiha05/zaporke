@@ -133,9 +133,14 @@
         </p>
         <p>
           Na stranici
-          <a href="https://haveibeenpwned.com/">Have I've been pwned?</a> možete
-          upisati vaš e-mail i saznati postoji li u bazi (poznatih!) hakerskih
-          napada.
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://haveibeenpwned.com/"
+            >Have I've been pwned?</a
+          >
+          možete upisati vaš e-mail i saznati postoji li u bazi (poznatih!)
+          hakerskih napada.
         </p>
       </section>
 
@@ -310,15 +315,15 @@
             >
             <br />
             <br />
-            Razumljivo, no valja uzeti tri stvari u obzir. Prvo- mnogo je
+            Razumljivo, no valja uzeti tri stvari u obzir. Prvo - mnogo je
             upravitelja zaporki otvorenog koda što znači da svatko može
-            pročitati i vidjeti što oni rade. Drugo- Vaše zaporke nikada nisu na
-            internetu u "čistom" obliku. Sve Vaše zaporke pohranjene su u
+            pročitati i vidjeti što oni rade. Drugo - Vaše zaporke nikada nisu
+            na internetu u "čistom" obliku. Sve Vaše zaporke pohranjene su u
             šifriranom obliku, a Vaša glavna zaporka je ključ koji ih dešifrira,
             a to šifriranje/dešifriranje se događa na Vašem uređaju te se na
             internet šalju samo kad su šifrirane. Ako se i dalje ne osjećate
             sigurno oko toga, postoje i upravitelji zaporki koji rade samo
-            lokalno/<em>offline</em>. Treće- bilo kakve "sive" radnje onih koji
+            lokalno/<em>offline</em>. Treće - bilo kakve "sive" radnje onih koji
             rade na upravitelju zaporki idu direktno protiv njihovog poslovnog
             modela i svrhe postojanja - zamislite da postoji banka koja
             povremeno skine ljudima 5000 KN s računa bez obrazloženja, koliko bi
@@ -333,18 +338,30 @@
           <br />
           Ja neću govoriti koji je najbolji po nekim tehničkim ili drugim
           kriterijima, svi popularni su tu negdje. Ali moj subjektivni odabir i
-          savjet je <a href="https://bitwarden.com/">Bitwarden</a>. Dolazi u
-          besplatnoj i plaćenoj verziji. Besplatna verzija je i više nego
-          dovoljna. Pruža mogućnost online sinkronizacije, dostupan je na svim
-          uređajima i platformama (Windows, Mac, Linux, Android, iOS) te je
+          savjet je
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://bitwarden.com/"
+            >Bitwarden</a
+          >. Dolazi u besplatnoj i plaćenoj verziji. Besplatna verzija je i više
+          nego dovoljna. Pruža mogućnost online sinkronizacije, dostupan je na
+          svim uređajima i platformama (Windows, Mac, Linux, Android, iOS) te je
           otvorenog koda.
           <br />
           Bitwarden upravitelj je zaporki koji zaporke pohranjuje na internetu
           (u oblaku), a ako želite nešto što radi isključivo lokalno/<em
             >offline</em
           >
-          savjetujem onda <a href="https://keepassxc.org/">KeePassXC</a> iako
-          sam ga osobno slabo koristio, no vidio ga dosta kod drugih u upotrebi.
+          savjetujem onda
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://keepassxc.org/"
+            >KeePassXC</a
+          >
+          iako sam ga osobno slabo koristio, no vidio ga dosta kod drugih u
+          upotrebi.
           <br />
           <br />
           <strong
@@ -399,16 +416,17 @@
       <section id="generator">
         <h2 id="generator-izraza-kao-zaporke">Generator izraza kao zaporke</h2>
         <p>
-          Ovo je generator izraza kao zaporke na hrvatskom jeziku. Moj savjet
-          je- ne odabirite manje od 4 riječi za izraz.
+          Ovo je generator izraza kao zaporke na hrvatskom jeziku. Moj savjet je
+          - ne odabirite manje od 4 riječi za izraz.
           <br />
           Sastoji se od 35497 hrvatskih riječi (ne nužno književnih). Što znači
           da, ako odaberete 4 riječi, broj kombinacija koje se mogu stvoriti je
           35497 na četvrtu potenciju, Vama ostavljam kalkulator da izračunate
           koliko je to.
+          <small style="font-size: 0.5rem">(1,587,693,264,049,666,081)</small>
           <br />
           Također postoji opcija da se umetne <em>$</em> nasumično u jednu od
-          rečenica, što dodatno povećava nasumičnost.
+          rečenica, što dodatno povećava broj kombinacija.
         </p>
         <p>
           <span class="warning">
@@ -470,11 +488,14 @@
               <label for="count">Broj riječi (max 10 zbog performansi):</label>
               <input
                 id="count"
-                type="number"
+                type="range"
                 min="1"
                 max="10"
                 v-model="count"
+                style="transform: translateY(4px)"
               />
+              &nbsp;
+              <output for="count">{{count}}</output>
             </div>
             <div class="form-group">
               <label class="clickable" for="dollar"
@@ -485,17 +506,106 @@
                 type="checkbox"
                 v-model="insertDollar"
                 class="clickable"
+                style="margin-left: -8px"
               />
             </div>
-            <div
-              v-if="!result"
-              style="min-height: 50px; padding-top: 1rem; text-align: center"
-            >
-              Ovdje će biti Vaš rezultat
+            <div role="region" aria-live="polite">
+              <div
+                v-if="!result"
+                style="min-height: 50px; padding-top: 1rem; text-align: center"
+              >
+                Ovdje će biti Vaš rezultat
+              </div>
+              <div v-else style="min-height: 50px"><code>{{result}}</code></div>
             </div>
-            <div v-else style="min-height: 50px"><code>{{result}}</code></div>
             <button>{{result ? 'Ponovno' : 'Izgeneriraj'}}</button>
           </form>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="dodatni-savjeti">Dodatni savjeti</h2>
+        <ul>
+          <li>
+            Da bi ste dodatno zaštitili ostale račune, a pogotovo glavnu zaporku
+            upravitelja zaporki, koristite tzv. potvrdu u dva koraka. To je
+            način prijave gdje nakon što je točna zaporka unesena treba još
+            dodatno na neki način potvrditi da se to stvarno Vi prijavljujete.
+            Neki od načina su: dobivanje dodatnog koda putem SMS-a kojeg potom
+            trebate unijeti, aplikacija na mobitelu koja traži da potvrdite da
+            ste to Vi, no najčešći oblik s kojim ćete se susresti je potvrda u
+            dva koraka pomoću jednokratne zaporke bazirane na vremenu (TOTP). To
+            funkcionira na način da preuzmete aplikaciju na koju dodajete
+            povezane račune, a aplikacija stalno generira jednokratne kodove
+            koji se vrte svakih 30 sekundi.
+          </li>
+          <li>
+            Osobno od ovih gore navedenih metoda strogo preporučujem izbjegavati
+            SMS. SMS je nesiguran, nešifriran kanal, a preporučam najbolje
+            potvrdu pomoću jednokratne zaporke bazirane na vremenu (TOTP) iz
+            razloga što je to otvoreni i dogovoreni protokol te funkcionira uz
+            niz aplikacija.
+          </li>
+          <li>
+            Koju god metodu odabrali izradite i sačuvajte pričuvne kodove koje
+            možete koristiti umjesto dodatne potvrde ukoliko izgubite pristup
+            sredstvu dodatne potvrde.
+          </li>
+          <li>
+            Neke od aplikacija za TOTP omogućuju šifrirano izvezivanje računa
+            koje možete prebaciti na računalo ili neko drugo sigurno mjesto.
+            Prednosti toga su da ih možete ponovno uvesti na novi mobilni uređaj
+            ili ih brzo oporaviti ako izgubite trenutni. Neke od takvih su:
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp&hl=en_US&gl=US"
+              >andOTP</a
+            >
+            te
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://play.google.com/store/apps/details?id=com.beemdevelopment.aegis&hl=en_US&gl=US"
+              >Aegis</a
+            >.
+          </li>
+          <li>
+            Dodatni i najsigurniji korak, ako ste voljni potrošiti novce, kupnja
+            je jednog od hardverskih ključeva kojima je namijena biti "drugi
+            korak". Npr.
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.yubico.com/"
+              >YubiKey</a
+            >,
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://cloud.google.com/titan-security-key/"
+              >Google Titan</a
+            >
+            <br />
+            Prednost ovakvih hardverskih rješenja je što će oni raditi samo na
+            fizički dodir ključa i to što će takvi ključevi pomoću
+            kriptografskih algoritama moći utvrditi je li stranica ili
+            aplikacija stvarno ta kojom se predstavlja. Mali problem kod svih
+            ostalih metoda dvostruke provjere je taj što ako Vas napadač navede
+            na lažnu stranicu, koja izgleda kao ona prava, vrlo lako može
+            ukrasti i zaporku, pa nakon toga i jednokratni kod.
+          </li>
+          <li>
+            S obzirom da vjerojatno nemate hardverski ključ, u upravitelju
+            zaporke uvijek uz račun navedite povezane stranice i aplikacije kako
+            bi ograničili mjesta na kojima se zaporka može popuniti. Na taj
+            način ako vi ne primjetite da ste na lažnoj stranici onda upravitelj
+            zaporki hoće.
+          </li>
+          <li>
+            Uvijek koristite sigurne veze (HTTPS + lokot pored adrese) jer svaki
+            savjet koji sam dosad naveo pada u vodu na nesigurnoj vezi.
+          </li>
         </ul>
       </section>
     </main>
@@ -538,6 +648,38 @@
         </svg>
       </a>
     </aside>
+
+    <footer>
+      <small>
+        Ikone:
+        <a href="https://tablericons.com/">https://tablericons.com/</a>
+      </small>
+      <a
+        target="_blank"
+        rel="noreferrer noopener"
+        href="https://github.com/mmiha05/zaporke.github.io"
+      >
+        <figure>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#2c3e50"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+            />
+          </svg>
+          <figcaption>Github</figcaption>
+        </figure>
+      </a>
+    </footer>
     <!-- SCRIPT -->
     <script src="js.js"></script>
   </body>

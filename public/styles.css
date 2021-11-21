@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -111,7 +115,7 @@ h3 {
 }
 
 .featured {
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 li {
@@ -140,7 +144,17 @@ li {
 form button {
   margin-top: 1rem;
   min-width: 124px;
-  height: 24px;
+  height: 32px;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 code {
@@ -149,4 +163,18 @@ code {
   margin: 1rem 0;
   display: block;
   text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+footer figure {
+  margin-top: 1rem;
+}
+
+footer figure svg {
+  width: 24px;
+  display: block;
+  margin: 0 auto;
 }
