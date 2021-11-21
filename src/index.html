@@ -423,9 +423,10 @@
           da, ako odaberete 4 riječi, broj kombinacija koje se mogu stvoriti je
           35497 na četvrtu potenciju, Vama ostavljam kalkulator da izračunate
           koliko je to.
+          <small style="font-size: 0.5rem">(1,587,693,264,049,666,081)</small>
           <br />
           Također postoji opcija da se umetne <em>$</em> nasumično u jednu od
-          rečenica, što dodatno povećava nasumičnost.
+          rečenica, što dodatno povećava broj kombinacija.
         </p>
         <p>
           <span class="warning">
@@ -487,11 +488,14 @@
               <label for="count">Broj riječi (max 10 zbog performansi):</label>
               <input
                 id="count"
-                type="number"
+                type="range"
                 min="1"
                 max="10"
                 v-model="count"
+                style="transform: translateY(4px)"
               />
+              &nbsp;
+              <output for="count">{{count}}</output>
             </div>
             <div class="form-group">
               <label class="clickable" for="dollar"
@@ -502,15 +506,18 @@
                 type="checkbox"
                 v-model="insertDollar"
                 class="clickable"
+                style="margin-left: -8px"
               />
             </div>
-            <div
-              v-if="!result"
-              style="min-height: 50px; padding-top: 1rem; text-align: center"
-            >
-              Ovdje će biti Vaš rezultat
+            <div role="region" aria-live="polite">
+              <div
+                v-if="!result"
+                style="min-height: 50px; padding-top: 1rem; text-align: center"
+              >
+                Ovdje će biti Vaš rezultat
+              </div>
+              <div v-else style="min-height: 50px"><code>{{result}}</code></div>
             </div>
-            <div v-else style="min-height: 50px"><code>{{result}}</code></div>
             <button>{{result ? 'Ponovno' : 'Izgeneriraj'}}</button>
           </form>
         </ul>
