@@ -416,8 +416,8 @@
       <section id="generator">
         <h2 id="generator-izraza-kao-zaporke">Generator izraza kao zaporke</h2>
         <p>
-          Ovo je generator izraza kao zaporke na hrvatskom jeziku. Moj savjet
-          je- ne odabirite manje od 4 riječi za izraz.
+          Ovo je generator izraza kao zaporke na hrvatskom jeziku. Moj savjet je
+          - ne odabirite manje od 4 riječi za izraz.
           <br />
           Sastoji se od 35497 hrvatskih riječi (ne nužno književnih). Što znači
           da, ako odaberete 4 riječi, broj kombinacija koje se mogu stvoriti je
@@ -520,6 +520,92 @@
             </div>
             <button>{{result ? 'Ponovno' : 'Izgeneriraj'}}</button>
           </form>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="dodatni-savjeti">Dodatni savjeti</h2>
+        <ul>
+          <li>
+            Da bi ste dodatno zaštitili ostale račune, a pogotovo glavnu zaporku
+            upravitelja zaporki, koristite tzv. potvrdu u dva koraka. To je
+            način prijave gdje nakon što je točna zaporka unesena, treba još
+            dodatno na neki način potvrditi da se to stvarno Vi prijavljujete.
+            Neki od načina su dobivanje dodatnog koda putem SMS-a kojeg potom
+            trebate unijeti, aplikacija na mobitelu koja traži da potvrdite da
+            ste to Vi, no najčešći oblik s kojim ćete se susresti je potvrda u
+            dva koraka pomoću jednokratne zaporke bazirane na vremenu (TOTP). To
+            funkcionira na način da preuzmete aplikaciju na koju dodajete
+            povezane račune, a aplikacija stalno generira jednokratne kodove
+            koji se vrte svakih 30 sekundi.
+          </li>
+          <li>
+            Osobno od ovih gore navedenih metoda strogo preporučujem izbjegavati
+            SMS. SMS je nesiguran, nešifrirani kanal, a preporučam najbolje
+            potvrdu pomoću jednokratne zaporke bazirane na vremenu (TOTP) iz
+            razloga što je to otvoreni i dogovoreni protokol te funkcionira uz
+            nih aplikacija.
+          </li>
+          <li>
+            Koju god metodu odabrali izradite i sačuvajte pričuvne kodove, koje
+            možete koristiti umjesto dodatne potvrde ukoliko izgubite pristup
+            sredstvu dodatne potvrde.
+          </li>
+          <li>
+            Neke od aplikacija za TOTP omogućuju šifrirano izvezivanje računa,
+            koje možete prebaciti na računalo ili neko drugo sigurno mjesto,
+            prednosti toga su da možete ponovno uvesti ih na novi mobilni uređaj
+            ili ih brzo oporaviti ako izgubite trenutni. Neke od takvih su
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp&hl=en_US&gl=US"
+              >andOTP</a
+            >
+            te
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://play.google.com/store/apps/details?id=com.beemdevelopment.aegis&hl=en_US&gl=US"
+              >Aegis</a
+            >.
+          </li>
+          <li>
+            Dodatni i najsigurniji korak, ako ste voljni potrošiti novce je
+            kupnja jednog od hardverskih ključeva kojima je namijena biti "drugi
+            korak". Npr.
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.yubico.com/"
+              >YubiKey</a
+            >,
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://cloud.google.com/titan-security-key/"
+              >Google Titan</a
+            >
+            <br />
+            Prednost ovakvih hardverskih rješenja je što će oni raditi samo na
+            fizički dodir ključa i to što će takvi ključevi pomoću
+            kriptografskih algoritama moći utvrditi da li je stranica ili
+            aplikacija stvarno ta kojom se predstavlja. Mali problem kod svih
+            ostalih metoda dvostruke provjere je taj što ako Vas napadač navede
+            na lažnu stranicu, koja izgleda kao ona prava, vrlo lako može
+            ukrasti i zaporku, pa nakon toga i jednokranti kod.
+          </li>
+          <li>
+            S obzirom da vjerojatno nemate hardverski ključ, u upravitelju
+            zaporke uvijek uz račun navedite povezane stranice i aplikacije kako
+            bi ograničili mjesta na kojima se zaporka može popuniti, na taj
+            način ako vi ne primjetite da ste na lažnoj stranici onda upravitelj
+            zaporki hoće.
+          </li>
+          <li>
+            Uvijek koristite veze osigurane (HTTPS + lokot pored adrese), jer
+            svaki savjeti koji sam dosad naveo pada u vodu na nesigurnoj vezi.
+          </li>
         </ul>
       </section>
     </main>
