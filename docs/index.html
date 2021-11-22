@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -464,7 +464,7 @@
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://raw.githubusercontent.com/mmiha05/zaporke.github.io/main/src/words.js?token=ALG5QFP3P7POO74OM7VHJ7TBTESEM"
+              href="https://raw.githubusercontent.com/mmiha05/zaporke/main/src/words.js?token=ALG5QFP3P7POO74OM7VHJ7TBTESEM"
               >linku</a
             >
             i sami nekom drugom metodom nasumičnog odabira odabrati riječi.
@@ -481,46 +481,45 @@
             Pročitajte i zadnju sekciju na stranici
             <a href="#dodatni-savjeti">(Dodatni savjeti)</a>.
           </li>
-          <br />
-          <!-- VUE BINDS -->
-          <form v-on:submit.prevent @submit="generate">
-            <div class="form-group">
-              <label for="count">Broj riječi (max 10 zbog performansi):</label>
-              <input
-                id="count"
-                type="range"
-                min="1"
-                max="10"
-                v-model="count"
-                style="transform: translateY(4px)"
-              />
-              &nbsp;
-              <output for="count">{{count}}</output>
-            </div>
-            <div class="form-group">
-              <label class="clickable" for="dollar"
-                >Ubaci <em>$</em> nasumično u jednu od riječi:</label
-              >
-              <input
-                id="dollar"
-                type="checkbox"
-                v-model="insertDollar"
-                class="clickable"
-                style="margin-left: -8px"
-              />
-            </div>
-            <div role="region" aria-live="polite">
-              <div
-                v-if="!result"
-                style="min-height: 50px; padding-top: 1rem; text-align: center"
-              >
-                Ovdje će biti Vaš rezultat
-              </div>
-              <div v-else style="min-height: 50px"><code>{{result}}</code></div>
-            </div>
-            <button>{{result ? 'Ponovno' : 'Izgeneriraj'}}</button>
-          </form>
         </ul>
+        <!-- VUE BINDS -->
+        <form v-on:submit.prevent @submit="generate">
+          <div class="form-group">
+            <label for="count">Broj riječi (max 10 zbog performansi):</label>
+            <input
+              id="count"
+              type="range"
+              min="1"
+              max="10"
+              v-model="count"
+              style="transform: translateY(4px)"
+            />
+            &nbsp;
+            <output for="count">{{count}}</output>
+          </div>
+          <div class="form-group">
+            <label class="clickable" for="dollar"
+              >Ubaci <em>$</em> nasumično u jednu od riječi:</label
+            >
+            <input
+              id="dollar"
+              type="checkbox"
+              v-model="insertDollar"
+              class="clickable"
+              style="margin-left: -8px"
+            />
+          </div>
+          <div role="region" aria-live="polite">
+            <div
+              v-if="!result"
+              style="min-height: 50px; padding-top: 1rem; text-align: center"
+            >
+              Ovdje će biti Vaš rezultat
+            </div>
+            <div v-else style="min-height: 50px"><code>{{result}}</code></div>
+          </div>
+          <button>{{result ? 'Ponovno' : 'Izgeneriraj'}}</button>
+        </form>
       </section>
 
       <section>
@@ -652,12 +651,17 @@
     <footer>
       <small>
         Ikone:
-        <a href="https://tablericons.com/">https://tablericons.com/</a>
+        <a
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://tablericons.com/"
+          >https://tablericons.com/</a
+        >
       </small>
       <a
         target="_blank"
         rel="noreferrer noopener"
-        href="https://github.com/mmiha05/zaporke.github.io"
+        href="https://github.com/mmiha05/zaporke"
       >
         <figure>
           <svg
