@@ -40,7 +40,7 @@ const phraseGenerator = new Vue({
   el: "#generator",
   data: {
     count: 4,
-    insertDollar: false,
+    insertRandomSpecial: false,
     result: "",
     isWebCryptoSupported:
       "crypto" in window && typeof window.crypto.getRandomValues === "function",
@@ -59,13 +59,18 @@ const phraseGenerator = new Vue({
         result.push(WORDS_LIST[generateRandomNumber() % WORDS_LIST.length]);
       }
 
-      if (this.insertDollar) {
+      if (this.insertRandomSpecial) {
+        const randomSpecials = ["$", "#", "!"];
         const randomWordIndex = generateRandomNumber() % result.length;
         const word = result[randomWordIndex];
 
         const randomCharIndex = generateRandomNumber() % word.length;
         const chars = word.split("");
-        chars.splice(randomCharIndex, 0, "$");
+        chars.splice(
+          randomCharIndex,
+          0,
+          randomSpecials[generateRandomNumber() % randomSpecials.length]
+        );
 
         result[randomWordIndex] = chars.join("");
       }
