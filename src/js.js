@@ -40,7 +40,7 @@ const phraseGenerator = new Vue({
   el: "#generator",
   data: {
     count: 4,
-    insertRandomSpecial: false,
+    insertRandomSpecial: true,
     result: "",
     isWebCryptoSupported:
       "crypto" in window && typeof window.crypto.getRandomValues === "function",
