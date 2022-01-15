@@ -425,8 +425,9 @@
           koliko je to.
           <small style="font-size: 0.5rem">(1,587,693,264,049,666,081)</small>
           <br />
-          Također postoji opcija da se umetne <em>$</em> nasumično u jednu od
-          rečenica, što dodatno povećava broj kombinacija.
+          Također postoji opcija da se umetne <em>$, !</em> ili
+          <em>#</em> nasumično u jednu od riječi, što dodatno povećava broj
+          kombinacija.
         </p>
         <p>
           <span class="warning">
@@ -498,18 +499,28 @@
             <output for="count">{{count}}</output>
           </div>
           <div class="form-group">
-            <label class="clickable" for="dollar"
-              >Ubaci <em>$</em> nasumično u jednu od riječi:</label
+            <label class="clickable" for="randomSpecial"
+              >Umetni <em>$, !</em> ili <em>#</em> nasumično u jednu od
+              riječi:</label
             >
             <input
-              id="dollar"
+              id="randomSpecial"
               type="checkbox"
-              v-model="insertDollar"
+              v-model="insertRandomSpecial"
               class="clickable"
               style="margin-left: -8px"
             />
           </div>
-          <div role="region" aria-live="polite">
+          <p
+            class="warning"
+            style="text-align: center"
+            v-if="!isWebCryptoSupported"
+          >
+            Vaš preglednik na žalost ne podržava nasumično generiranje :(
+            <br />
+            Pokušajte koristiti neki noviji preglednik.
+          </p>
+          <div role="region" aria-live="polite" v-else>
             <div
               v-if="!result"
               style="min-height: 50px; padding-top: 1rem; text-align: center"
@@ -518,7 +529,9 @@
             </div>
             <div v-else style="min-height: 50px"><code>{{result}}</code></div>
           </div>
-          <button>{{result ? 'Ponovno' : 'Izgeneriraj'}}</button>
+          <button :disabled="!isWebCryptoSupported">
+            {{result ? 'Ponovno' : 'Izgeneriraj'}}
+          </button>
         </form>
       </section>
 

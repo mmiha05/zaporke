@@ -178,3 +178,8 @@ footer figure svg {
   display: block;
   margin: 0 auto;
 }
+
+button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
