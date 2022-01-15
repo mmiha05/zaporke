@@ -42,6 +42,8 @@ const phraseGenerator = new Vue({
     count: 4,
     insertDollar: false,
     result: "",
+    isWebCryptoSupported:
+      "crypto" in window && typeof window.crypto.getRandomValues === "function",
   },
   methods: {
     generate() {

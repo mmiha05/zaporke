@@ -509,7 +509,16 @@
               style="margin-left: -8px"
             />
           </div>
-          <div role="region" aria-live="polite">
+          <p
+            class="warning"
+            style="text-align: center"
+            v-if="!isWebCryptoSupported"
+          >
+            Vaš preglednik na žalost ne podržava nasumično generiranje :(
+            <br />
+            Pokušajte koristiti neki noviji preglednik.
+          </p>
+          <div role="region" aria-live="polite" v-else>
             <div
               v-if="!result"
               style="min-height: 50px; padding-top: 1rem; text-align: center"
@@ -518,7 +527,9 @@
             </div>
             <div v-else style="min-height: 50px"><code>{{result}}</code></div>
           </div>
-          <button>{{result ? 'Ponovno' : 'Izgeneriraj'}}</button>
+          <button :disabled="!isWebCryptoSupported">
+            {{result ? 'Ponovno' : 'Izgeneriraj'}}
+          </button>
         </form>
       </section>
 
